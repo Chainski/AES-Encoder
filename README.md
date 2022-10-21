@@ -5,14 +5,14 @@
 # AES-Encoder
 ![bannner](https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png)
 
-# PowerShell Crypter v 1.0
+## PowerShell Crypter v 1.0
 
 ## Authors
 
-[Xentropy](http://twitter.com/SamuelAnttila)
-[SecForce](http://twitter.com/SECFORCE_LTD)
+- [Xentropy](http://twitter.com/SamuelAnttila)
+- [SecForce](http://twitter.com/SECFORCE_LTD)
 
-[Make your own cryter](https://netsec.expert/2020/02/06/write-a-crypter-in-any-language.html)
+[Make your own crypter](https://netsec.expert/2020/02/06/write-a-crypter-in-any-language.html)
 
 # Features
 
