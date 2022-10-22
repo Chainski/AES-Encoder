@@ -154,7 +154,7 @@ sleep 1
             # write
             Write-Host "[*] Obfuscating Layers ..."
 
-            # Added Support for Unicode and HTML Decoding
+            # Added Support for Unicode, URL & HTML Decoding
 
             $stub_template = ''
 
