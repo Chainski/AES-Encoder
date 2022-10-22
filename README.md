@@ -5,7 +5,7 @@
 # AES-Encoder
 ![bannner](https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png)
 
-## PowerShell Crypter v 1.0
+## PowerShell Crypter 
 
 ## Authors
 
@@ -14,21 +14,24 @@
 
 [Make your own crypter](https://netsec.expert/2020/02/06/write-a-crypter-in-any-language.html)
 
-# Features
-
-## AES-Encoder
+## Original Features
 
 - Bypasses AMSI and all modern AVs in use on VirusTotal (as of writing)
 - Compresses and encrypts powershell scripts
 - Has a minimal and often even negative (thanks to the compression) overhead
 - Randomizes variable names to further obfuscate the decrypter stub
-- Randomizes encryption, Obfuscate with Unicode and HTML Encoding then Compress for maximum entropy!
+- Randomizes encryption, compression and even the order that the statements appear in the code for maximum entropy!
 - Super easy to modify to create your own crypter variant
 - Supports recursive layering (crypter crypting the crypted output)
 - Supports Import-Module as well as standard running as long as the input script also supported it
 - GPLv3 -- Free and open-source!
 - All features in a single file so you can take it with you anywhere!
 
+## Added Features
+
+- Unicode Encoding
+- HTML Encoding
+- Url Encoding
 
 ## Usage
 
