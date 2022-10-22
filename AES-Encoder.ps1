@@ -100,9 +100,9 @@ sleep 1
         for ($i = 1; $i -le $iterations; $i++) {
             
             Write-Host "[*] Starting Encryption Process ..." -ForegroundColor Red 
-            $paddingmodes = 'PKCS7','ISO10126','ANSIX923','Zeros'
+            $paddingmodes = 'pKCs7','Iso10126','anSIx923','ZeROs'
             $paddingmode = $paddingmodes | Get-Random
-            $ciphermode = 'CBC'
+            $ciphermode = 'CbC'
             $keysizes = 128,192,256
             $keysize = $keysizes | Get-Random
             $compressiontypes = 'Gzip','Deflate'
@@ -137,8 +137,8 @@ sleep 1
                 $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::ZeRoS
             }
             
-			$aesManaged.BlockSize = 128
-            $aesManaged.KeySize = 256
+			$aesManaged.bLOcKSiZe = 128
+            $aesManaged.keysiZE = 256
             $aesManaged.GenerateKey()
             $b64key = [System.Convert]::ToBase64String($aesManaged.Key)
 
@@ -169,9 +169,9 @@ sleep 1
            
 		   $code_alternatives  = @()
             $code_alternatives += '${4}.ModE = [SYSTem.SecUriTy.CrYPTOGrapHY.cIpheRmodE]::'+$CIpHerMoDE + "`r`n"
-            $code_alternatives += '${4}.Padding = [sYsTem.SECuRIty.cRYptOGRaPhy.PaDdiNgMoDe]::'+$paddingmode + "`r`n"
+            $code_alternatives += '${4}.pAddINg = [sYsTem.SECuRIty.cRYptOGRaPhy.PaDdiNgMoDe]::'+$paddingmode + "`r`n"
             $code_alternatives += '${4}.BlOckSIze = [SySTEm.NEt.WeButiliTy]::hTmLdEcOdE("&#x31;&#x32;&#x38;") | Iex' + "`r`n"         			
-            $code_alternatives += '${4}.KeySize = '+$keysize + "`n" + '${4}.Key = ${3}' + "`r`n"
+            $code_alternatives += '${4}.kEYSiZe = '+$keysize + "`n" + '${4}.Key = ${3}' + "`r`n"
             $code_alternatives += '${4}.Iv = ${2}[0..15]' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives 
             $stub_template += $code_alternatives_shuffled -join ''
