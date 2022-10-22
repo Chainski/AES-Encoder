@@ -102,7 +102,8 @@ sleep 1
             Write-Host "[*] Starting Encryption Process ..." -ForegroundColor Red 
             $paddingmodes = 'pKCs7','Iso10126','anSIx923','ZeROs'
             $paddingmode = $paddingmodes | Get-Random
-            $ciphermode = 'CbC'
+            $ciphermodes = 'CbC','EcB'
+			$ciphermode = $ciphermodes | Get-Random
             $keysizes = 128,192,256
             $keysize = $keysizes | Get-Random
             $compressiontypes = 'Gzip','Deflate'
@@ -125,18 +126,22 @@ sleep 1
             Write-Host "[*] Generating Encryption Key ..." 
             
 			$aesManaged = New-Object "System.Security.Cryptography.AesManaged"
-            $aesManaged.Mode = [System.Security.Cryptography.CipherMode]::CbC
-            
-			if ($paddingmode -eq 'PkCs7') {
-                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::PkCs7
-            } elseif ($paddingmode -eq 'IsO10126') {
-                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::IsO10126
-            } elseif ($paddingmode -eq 'AnSIx923') {
-                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::AnSIx923
-            } elseif ($paddingmode -eq 'ZeRoS') {
-                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::ZeRoS
+            if ($ciphermode -eq 'CBC') {
+                $aesManaged.Mode = [System.Security.Cryptography.CipherMode]::CBC
+            } elseif ($ciphermode -eq 'ECB') {
+                $aesManaged.Mode = [System.Security.Cryptography.CipherMode]::ECB
             }
-            
+
+            if ($paddingmode -eq 'PKCS7') {
+                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::PKCS7
+            } elseif ($paddingmode -eq 'ISO10126') {
+                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::ISO10126
+            } elseif ($paddingmode -eq 'ANSIX923') {
+                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::ANSIX923
+            } elseif ($paddingmode -eq 'Zeros') {
+                $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::Zeros
+            }
+			
 			$aesManaged.bLOcKSiZe = 128
             $aesManaged.keysiZE = 256
             $aesManaged.GenerateKey()
@@ -154,7 +159,7 @@ sleep 1
             # write
             Write-Host "[*] Obfuscating Layers ..."
 
-            # Added Support for Unicode, URL & HTML Decoding
+            # Added Support for Unicode, URL and HTML Decoding
 
             $stub_template = ''
 
