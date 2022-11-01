@@ -29,9 +29,10 @@
 
 ## Added Features
 
+- AMSI Bypass
 - Unicode Encoding
 - HTML Encoding
-- Url Encoding
+- URL Encoding
 
 ## Usage
 
