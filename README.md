@@ -16,7 +16,7 @@
 
 ## Original Features
 
-- Bypasses AMSI and all modern AVs in use on VirusTotal (as of writing)
+- Bypasses All modern AVs in use on VirusTotal 
 - Compresses and encrypts powershell scripts
 - Has a minimal and often even negative (thanks to the compression) overhead
 - Randomizes variable names to further obfuscate the decrypter stub
