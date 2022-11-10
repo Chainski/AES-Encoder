@@ -24,7 +24,7 @@
 - Super easy to modify to create your own crypter variant
 - Supports recursive layering (crypter crypting the crypted output)
 - Supports Import-Module as well as standard running as long as the input script also supported it
-- GPLv3 -- Free and Open-Source!
+- GPLv3 - Free and Open-Source!
 - All features in a single file so you can take it with you anywhere!
 
 ## Added Features
