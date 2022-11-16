@@ -1,7 +1,7 @@
-<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/OPEN--SOURCE-YES-green"></a>
-<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
 <a href="https://github.com/Chainski/AES-Encoder/blob/main/AES-Encoder.ps1"><img src="https://img.shields.io/badge/power-shell-blue"></a> 
-<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/downloads/chainski/AES-Encoder/total"></a> 
+<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/OPEN--SOURCE-YES-green"></a>
+<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/stars/chainski/AES-Encoder"></a> 
+<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
 
 
 # AES-Encoder 🔒 
