@@ -1,8 +1,10 @@
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/OPEN--SOURCE-YES-green"></a>
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
+<a href="https://github.com/Chainski/AES-Encoder/blob/main/AES-Encoder.ps1"><img src="https://img.shields.io/badge/power-shell-blue"></a> 
+<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/downloads/chainski/AES-Encoder/total"></a> 
 
 
-# AES-Encoder
+# AES-Encoder 🔒 
 ![bannner](https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png)
 
 ## PowerShell Crypter 
