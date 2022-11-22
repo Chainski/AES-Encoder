@@ -1,4 +1,4 @@
-#    AES-Encoder - PowerShell crypter
+﻿#    AES-Encoder - PowerShell crypter
 #    Copyright (C) 2022 Chainski 
 #
 #    This program is free software: you can redistribute it and/or modify
