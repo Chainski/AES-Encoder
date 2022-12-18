@@ -29,7 +29,7 @@ function Create-Var() {
 function RAND() {
 
         $set = "xQpVQLuQpVQpVQpTVLQpVQyWpZPVQpkHVQpVQpVJQpGVQpVQpKVXQpVQpVQpVQpV"
-        (1..(7 + (Get-Random -minimum 9 -Maximum 12)) | %{ $set[(Get-Random -Minimum 10 -Maximum $set.Length)] } ) -join ''
+        (1..(7 + (Get-Random -minimum 9 -Maximum 13)) | %{ $set[(Get-Random -Minimum 10 -Maximum $set.Length)] } ) -join ''
 }
 
 function Invoke-AES-Encoder {
