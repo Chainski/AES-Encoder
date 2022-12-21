@@ -2,6 +2,7 @@
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/OPEN--SOURCE-YES-green"></a>
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/stars/chainski/AES-Encoder"></a> 
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
+<a href="https://github.com/chainski/AES-Encoder"> <img src="https://img.shields.io/badge/dynamic/json?label=Visitors&query=value&url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2FChainski%2FAES-Encoder"></a> 
 
 
 # AES-Encoder 🔒 
