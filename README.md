@@ -4,7 +4,6 @@
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
 <a href="https://github.com/chainski/AES-Encoder"> <img src="https://img.shields.io/badge/dynamic/json?label=Visitors&query=value&url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2FChainski%2FAES-Encoder"></a> 
 
-
 # AES-Encoder 🔒 
 ![bannner](https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png)
 
