@@ -28,8 +28,8 @@ function Create-Var() {
 
 function RAND() {
 
-        $set = "xQpVQLuQpVQpVQpTVLQpVQyWpZPVQpkHVQpVQpVJQpGVQpVQpKVXQpVQpVQpVQpV"
-        (1..(7 + (Get-Random -minimum 9 -Maximum 13)) | %{ $set[(Get-Random -Minimum 10 -Maximum $set.Length)] } ) -join ''
+        $set = "84E18641CB1D41958CA4B3660D4EF82A5A156A6594224AD7B11163DF90D9ABED"
+        (1..(7 + (Get-Random -minimum 9 -Maximum 12)) | %{ $set[(Get-Random -Minimum 10 -Maximum $set.Length)] } ) -join ''
 }
 
 function Invoke-AES-Encoder {
