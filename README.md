@@ -21,7 +21,7 @@
 - Bypasses All modern AVs in use on VirusTotal 
 - Compresses and encrypts powershell scripts
 - Has a minimal and often even negative (thanks to the compression) overhead
-- Randomizes variable names to further obfuscate the decrypter stub
+- Randomizes variable names to further obfuscates the decrypter stub
 - Randomizes encryption, compression and even the order that the statements appear in the code for maximum entropy!
 - Super easy to modify to create your own crypter variant
 - Supports recursive layering (crypter crypting the crypted output)
