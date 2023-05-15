@@ -208,7 +208,6 @@ function Invoke-AES-Encoder {
         
             # xor encrypt
             Write-Host "[*] Encrypting with XOR ..."
-            # this is a literal fucking hell,i need to fucking set variable names for the goddang xor encryptor/decryptor at the stub
             $string = Create-Var
             $method = Create-Var
             $key = Create-Var
