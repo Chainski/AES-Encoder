@@ -44,11 +44,11 @@ function Create-Var() {
 function xorEnc {
     Param (
         [Parameter(Mandatory,ValueFromPipeline,ValueFromPipelineByPropertyName)]
-        [string] $string = $(Throw("oopsie doopsie we made a fucky wucky shit")),
+        [string] $string = $(Throw("Error !")),
         [Parameter(Mandatory,ValueFromPipeline,ValueFromPipelineByPropertyName)]
-        [string] $method = $(Throw("oopsie doopsie we made a fucky wucky shit")),
+        [string] $method = $(Throw("Error !")),
         [Parameter(Mandatory,ValueFromPipeline,ValueFromPipelineByPropertyName)]
-        [string] $key = $(Throw("oopsie doopsie we made a fucky wucky shit"))
+        [string] $key = $(Throw("Error !"))
     )
     $xorkey = [System.Text.Encoding]::UTF8.GetBytes($key)
 
