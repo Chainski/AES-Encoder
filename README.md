@@ -2,17 +2,13 @@
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/OPEN--SOURCE-YES-green"></a>
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/stars/chainski/AES-Encoder"></a> 
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
-<a href="https://github.com/chainski/AES-Encoder"> <img src="https://img.shields.io/badge/dynamic/json?label=Visitors&query=value&url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2FChainski%2FAES-Encoder"></a> 
+<a href="https://github.com/chainski/AES-Encoder"> <img src="https://img.shields.io/endpoint?color=red&label=views&url=https%3A%2F%2Fhits.dwyl.com%2FChainski%2FAES-Encoder.json"></a> 
 
 # AES-Encoder 🔒 
 ![bannner](https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png)
 
 ## PowerShell Crypter 
 
-## Authors
-
-- [Xentropy](http://twitter.com/SamuelAnttila)
-- [SecForce](http://twitter.com/SECFORCE_LTD)
 
 [Make your own crypter](https://netsec.expert/2020/02/06/write-a-crypter-in-any-language.html)
 
@@ -33,8 +29,8 @@
 
 - AMSI Bypass
 - Unicode Encoding
+- Math Obfuscation
 - HTML Encoding
-- URL Encoding
 
 ## Usage
 
@@ -61,6 +57,10 @@ Invoke-AES-Encoder -InFile invoke-mimikatz.ps1 -OutFile aesmimi.ps1 -Iterations 
 
 **This tool is for educational use only, the author will not be held responsible for any misuse of this tool.**
 
+## Credits
+- [Xentropy](http://twitter.com/SamuelAnttila)
+- [SecForce](http://twitter.com/SECFORCE_LTD)
+- [GetRektBoy724](https://github.com/GetRektBoy724)
 
 
 #### Support and Contributions
