@@ -9,7 +9,6 @@
 
 ## PowerShell Crypter 
 
-
 [Make your own crypter](https://netsec.expert/2020/02/06/write-a-crypter-in-any-language.html)
 
 ## Original Features
