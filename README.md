@@ -2,7 +2,7 @@
 <a href="https://github.com/Chainski/AES-Encoder/blob/main/AES-Encoder.ps1"><img src="https://img.shields.io/badge/powershell-blue"></a> 
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/license/Chainski/AES-Encoder?style=flat&color=blue"></a>
 <a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/stars/Chainski/AES-Encoder?style=flat&color=blue"></a> 
-<a href="https://github.com/chainski/AES-Encoder"> <img src="https://hits.sh/github.com/Chainski/AES-Encoder.svg?color=0a7bbc"></a> 
+<a href="https://github.com/chainski/AES-Encoder"> <img src="https://hits.sh/github.com/Chainski/AES-Encoder.svg?label=views&color=0a7bbc"></a> 
 </p>
 
 <div align="center">
