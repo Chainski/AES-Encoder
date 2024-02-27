@@ -1,11 +1,18 @@
-<a href="https://github.com/Chainski/AES-Encoder/blob/main/AES-Encoder.ps1"><img src="https://img.shields.io/badge/power-shell-blue"></a> 
-<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/OPEN--SOURCE-YES-green"></a>
-<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/stars/chainski/AES-Encoder"></a> 
-<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/badge/license-GPL--3.0-orange"></a> 
-<a href="https://github.com/chainski/AES-Encoder"> <img src="https://img.shields.io/endpoint?color=red&label=views&url=https%3A%2F%2Fhits.dwyl.com%2FChainski%2FAES-Encoder.json"></a> 
+<p align= "center">
+<a href="https://github.com/Chainski/AES-Encoder/blob/main/AES-Encoder.ps1"><img src="https://img.shields.io/badge/powershell-blue"></a> 
+<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/license/Chainski/AES-Encoder?style=flat&color=blue"></a>
+<a href="https://github.com/chainski/AES-Encoder"><img src="https://img.shields.io/github/stars/Chainski/AES-Encoder?style=flat&color=blue"></a> 
+<a href="https://github.com/chainski/AES-Encoder"> <img src="https://hits.sh/github.com/Chainski/AES-Encoder.svg?color=0a7bbc"></a> 
+</p>
 
-# AES-Encoder 🔒 
-![bannner](https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png)
+<div align="center">
+  <center><h1>AES-Encoder 🔒 </h1></center>
+</div>
+
+<p align="center">
+  <img width="700" height="300" src="https://user-images.githubusercontent.com/96607632/197303769-6294023f-4b99-4bf7-a6bb-52dd1a5e6b4f.png">
+</p>
+
 
 ## PowerShell Crypter 
 
