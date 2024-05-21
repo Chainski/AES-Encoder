@@ -66,5 +66,3 @@ Invoke-AES-Encoder -InFile invoke-mimikatz.ps1 -OutFile aesmimi.ps1 -Iterations 
 ## Credits
 - [Xentropy](http://twitter.com/SamuelAnttila)
 - [SecForce](http://twitter.com/SECFORCE_LTD)
-- [GetRektBoy724](https://github.com/GetRektBoy724)
-
