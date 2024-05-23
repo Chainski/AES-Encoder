@@ -32,11 +32,8 @@
 - All features in a single file so you can take it with you anywhere!
 
 ## Added Features
-
 - AMSI Bypass
-- Unicode Encoding
 - Math Obfuscation
-- HTML Encoding
 
 ## Usage
 
