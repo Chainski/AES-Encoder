@@ -13,14 +13,13 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-# Made by https://github.com/chainski
+#    Made by https://github.com/chainski
 
 $console = $host.UI.RawUI
 $console.WindowTitle = "Powershell AES-Encoder"
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 $PSDefaultParameterValues['*:ErrorAction']='Stop'
-
 
 function random {
 $base64String = [Convert]::ToBase64String((1..10 | ForEach-Object {[byte](Get-Random -Max 256)}))
